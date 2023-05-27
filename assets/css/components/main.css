@@ -1,0 +1,250 @@
+main {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../../img/main/bgi-main.svg);
+  background-repeat: no-repeat;
+  background-position: 166% 98%;
+  background-size: 76%;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+header {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 100px 2fr 100px;
+  place-items: center;
+
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav a {
+
+  margin: 0 10px;
+  font-size: 2rem;
+  font-weight: normal;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+header nav a.active,
+header nav a:hover {
+  background-color: var(--secondaryColor);
+  padding: 5px 10px;
+
+}
+
+header .contBtn {
+  border: 2px solid var(--whiteColor);
+  color: var(--whiteColor);
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: transparent;
+  width: 155px;
+  height: 50px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  transition: 0.25s;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -ms-transition: 0.25s;
+  -o-transition: 0.25s;
+}
+
+header .contBtn:hover {
+  border: 2px solid var(--primaryColor);
+  background-color: var(--primaryColor);
+
+}
+
+header .icon-bar {
+  width: 70px;
+  height: 40px;
+  display: grid;
+  justify-items: center;
+  display: none;
+  cursor: pointer;
+}
+
+header .icon-bar span {
+  display: block;
+  width: 50%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+header .icon-bar span:nth-child(2) {
+  display: block;
+  width: 100%;
+
+}
+
+.hero {
+  min-height: 80vh;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  align-items: center;
+}
+
+.hero .content {
+  width: 550px;
+}
+
+.hero .content h2 {
+  font-size: 5rem;
+}
+
+.hero .content h1 {
+  font-size: 8rem;
+}
+
+.hero .content p {
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.hero .actions {
+  display: flex;
+  gap: 40px;
+  width: 70%;
+}
+
+.hero .actions a {
+  background-color: var(--whiteColor);
+  color: var(--secondaryColor);
+  font-size: 1.6rem;
+  border-radius: 25px;
+  padding: 10px 20px;
+  flex-grow: 1;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  transition: 0.25s;
+  border: 2px solid transparent;
+}
+
+.hero .actions a:hover {
+  background-color: transparent;
+  border: 2px solid var(--whiteColor);
+  color: var(--whiteColor);
+
+}
+
+.hero .actions .paly,
+.paly-up {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondaryColor);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.paly-up {
+  margin: 0px auto 20px;
+  display: none;
+}
+
+.hero .actions .paly:hover {
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
+}
+
+
+.hero .imgbox img {
+  width: 100%;
+  object-position: 150px;
+}
+
+
+
+/* xsm - sm - md*/
+@media (max-width : 992px) {
+  main {
+    background-image: none;
+  }
+
+  header nav,
+  header .contBtn,
+  .hero .actions .paly {
+    display: none;
+  }
+
+  header .icon-bar {
+    display: grid;
+    grid-column: 3 /4;
+  }
+
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+
+  }
+
+  .hero .content {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .hero .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero .content h1 {
+    font-size: 4rem;
+  }
+
+  .hero .content p {
+    font-size: 1.5rem;
+  }
+
+  .hero .imgbox {
+    height: 300px;
+  }
+
+  .hero .imgbox img {
+    height: 100%;
+    object-position: 50px;
+  }
+
+  .hero .actions {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .hero .actions a {
+    flex-grow: 0;
+  }
+
+
+
+  .paly-up {
+    display: grid;
+  }
+
+
+}

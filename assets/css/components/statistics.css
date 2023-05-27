@@ -1,0 +1,42 @@
+.statistics .numbersBox {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 70px;
+  background-color: var(--secondaryColor);
+  min-height: 200px;
+  border-radius: 139px;
+}
+
+.statistics .numbersBox .item .number {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.statistics .numbersBox .item h6 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.statistics .numbersBox .line {
+  height: 66px;
+  width: 2px;
+  background-color: var(--secondaryColor-light);
+}
+
+@media (max-width:992px) {
+  .statistics .numbersBox {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .statistics .numbersBox .line {
+    height: 3px;
+    min-width: 66px;
+    width: 30%;
+    background-color: var(--secondaryColor-light);
+  }
+}

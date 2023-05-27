@@ -1,0 +1,81 @@
+.blog {
+  background-image: url(../../img/blogs/bgo.svg);
+  background-repeat: no-repeat;
+  background-position: right 80px;
+  background-size: 200px;
+}
+
+.blog .cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.blog .cards article {
+  max-width: 380px;
+  max-height: 380px;
+  background-color: var(--secondaryColor2);
+  border-radius: 30px;
+  transition: 0.25s;
+  position: relative;
+}
+
+.blog .cards article:hover {
+  transform: translateY(-10px);
+}
+
+.blog .cards article .imgbox {
+  background-color: #f00;
+  border-radius: 30px;
+  height: 200px;
+}
+
+.blog .cards article .imgbox img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+
+}
+
+.blog .cards article .text {
+  text-align: left;
+  padding: 30px 20px;
+}
+
+.blog .cards article .text h5 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.blog .cards article .text .date {
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+
+.blog .cards article button {
+  all: unset;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--secondaryColor);
+  border-radius: 20px 0;
+  width: 50px;
+  height: 50px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+
+@media (max-width : 768px) {
+  .blog .cards {
+    width: 350px;
+    margin: auto;
+    gap: 0;
+    grid-template-columns: repeat(4, 100%);
+    overflow: hidden;
+  }
+}

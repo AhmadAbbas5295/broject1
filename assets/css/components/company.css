@@ -1,0 +1,41 @@
+.company .company-swiper {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: center;
+}
+
+.company .company-swiper .logos {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+
+
+
+@media (max-width : 1200px) {
+  .company .company-swiper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 30px;
+
+  }
+
+  .company .company-swiper .logos {
+    width: 320px;
+    overflow: hidden;
+    grid-column: 1 / span 4
+  }
+
+  .company .company-swiper .fa-angle-left,
+  .company .company-swiper .fa-angle-right {
+    order: 1;
+    grid-column: 2 / 3;
+
+  }
+
+  .company .company-swiper .fa-angle-right {
+    grid-column: 3 / 4;
+
+  }
+}

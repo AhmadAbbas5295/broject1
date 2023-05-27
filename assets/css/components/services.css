@@ -1,0 +1,85 @@
+.services-boxs {
+  display: grid;
+  gap: 30px;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.services-boxs .item {
+  background-color: var(--secondaryColor2);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 50px;
+  gap: 50px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.services-boxs .item::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--secondaryColor);
+  transition: 0.5s;
+}
+
+.services-boxs .item:hover::before {
+  width: 100%;
+
+}
+
+.services-boxs .item:hover button {
+  background-color: var(--secondaryColor2);
+
+}
+
+
+.services-boxs .item .icon {
+  position: relative;
+  z-index: 1;
+
+}
+
+.services-boxs .item .text {
+  text-align: left;
+  position: relative;
+  z-index: 1;
+
+}
+
+.services-boxs .item .text h5 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.services-boxs .item .text p {
+  font-size: 1.6rem;
+}
+
+.services-boxs .item button {
+  all: unset;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--secondaryColor);
+  border-radius: 20px 0;
+  width: 50px;
+  height: 50px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+@media (max-width:992px) {
+  .services-boxs {
+    grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+  }
+
+
+}
